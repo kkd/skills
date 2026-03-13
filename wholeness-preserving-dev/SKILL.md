@@ -4,16 +4,15 @@ description: |
   アレグザンダーの全体性・構造保存変容とアジャイルXPを統合した開発スキル。
   コードへの変更、新機能追加、設計判断、コードレビュー、技術的負債の評価、
   ユーザーストーリーの検討、プロダクトバックログの整理、あらゆる開発場面で参照せよ。
-  3レイヤー（Layer C: コード全体性 / Layer P: プロダクト×利用者の全体性 /
-  Layer H: 人間×エージェントの関係）を同時に扱い、エージェントの構造分析と
-  人間の感覚を突き合わせながら変容の道筋を共同生成する。
+  4レイヤー（Layer C: コード全体性 / Layer U: インターフェース×人の全体性 /
+  Layer P: プロダクト×利用者の全体性 / Layer H: 人間×エージェントの関係）を同時に扱い、
+  エージェントの構造分析と人間の感覚を突き合わせながら変容の道筋を共同生成する。
   4つのコンテキスト（利用者自身 / 開発者 / PO / 利用者=PO）を扱う。
 compatibility: Claude Code, Codex, and any terminal-based coding agent with bash and git access.
 metadata:
   author: wholeness-preserving-dev
-  version: "1.1"
+  version: "1.2"
   lang: ja
-  skill_dir: /Users/tkskkd/Workspaces/skills/wholeness-preserving-dev
 allowed-tools: Bash, Read, Write
 ---
 
@@ -45,12 +44,12 @@ allowed-tools: Bash, Read, Write
 **コア原則**: エージェントは構造を読む。人間は全体性を感じ取る。
 この2つを突き合わせることで、どちらも単独では見えなかった変容の道筋が生成される。
 
-詳細リファレンス（Read ツールで読み込む。パスは skill_dir からの絶対パスを使用）:
-- 15特性 × コード対応 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/fifteen-properties.md`
-- センター検出プロトコル → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/center-analysis.md`
-- プロダクト全体性 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/product-wholeness.md`
-- アジャイル/XP 統合 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/agile-xp-integration.md`
-- **UI/UX 全体性** → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/ui-ux-wholeness.md`
+詳細リファレンス（Read ツールで読み込む。パスは SKILL.md と同じディレクトリからの相対パス）:
+- 15特性 × コード対応 → `fifteen-properties.md`
+- センター検出プロトコル → `center-analysis.md`
+- プロダクト全体性 → `product-wholeness.md`
+- アジャイル/XP 統合 → `agile-xp-integration.md`
+- **UI/UX 全体性** → `ui-ux-wholeness.md`
 
 ---
 
@@ -218,7 +217,7 @@ find . \( -name "*.rb" -o -name "*.py" -o -name "*.ts" -o -name "*.go" \) \
   | xargs wc -l 2>/dev/null | sort -rn | head -10
 ```
 
-センター検出の詳細 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/center-analysis.md`
+センター検出の詳細 → `center-analysis.md`
 
 **エージェントの動き — Layer P:**
 
@@ -227,7 +226,7 @@ find . \( -name "*.rb" -o -name "*.py" -o -name "*.ts" -o -name "*.go" \) \
 - センターが不明確なバックログストーリー
 - ログの中の「予想外の使われ方」（= 利用者が作った非公式センター）
 
-詳細 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/product-wholeness.md`
+詳細 → `product-wholeness.md`
 
 **エージェントの動き — Layer U（UI/UX接触面がある場合）:**
 
@@ -237,7 +236,7 @@ find . \( -name "*.rb" -o -name "*.py" -o -name "*.ts" -o -name "*.go" \) \
 - インタラクションリズム: 操作→フィードバックの自然さ
 - ナビゲーション: 「今どこにいるか」が把握できるか
 
-詳細 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/ui-ux-wholeness.md`
+詳細 → `ui-ux-wholeness.md`
 
 **C×P の張力を可視化:**
 
@@ -272,7 +271,7 @@ C×P の接触点（張力）:
 
 **エージェントの動き:**
 
-Layer C の弱さ（15特性で診断 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/fifteen-properties.md`）:
+Layer C の弱さ（15特性で診断 → `fifteen-properties.md`）:
 ```
 最も弱い特性（上位3つ / L モードは上位1つ）:
   1. 特性[ ]: [コード上の具体的な現れ]
@@ -289,7 +288,7 @@ Layer U の弱さ（UI/UX接触面がある場合）:
 | 「なんか違和感がある」 | 局所的シンメトリー/共鳴 | 特性7・12 |
 | ツールチップへの依存 | よい形・不可分性 | 特性6・15 |
 
-詳細 → `/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/ui-ux-wholeness.md`
+詳細 → `ui-ux-wholeness.md`
 
 Layer P の弱さ:
 
