@@ -125,7 +125,7 @@ find . -name "*.rb" | xargs wc -l 2>/dev/null | sort -rn | head -10
 
 ### アプローチ3: 15特性の欠如から見つける
 
-`references/fifteen-properties.md` の診断チートシートを使い、
+`/Users/tkskkd/Workspaces/skills/wholeness-preserving-dev/fifteen-properties.md` の診断チートシートを使い、
 最も多く「弱い」と感じた特性を確認する。
 
 その特性が最も強く欠けているセンターを、次の着手点とする。
