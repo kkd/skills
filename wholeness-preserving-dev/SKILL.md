@@ -60,6 +60,7 @@ Layer W は「後ろめたさ」感覚の背後を照らす問いとして、特
 
 詳細リファレンス（Read ツールで読み込む。パスは SKILL.md と同じディレクトリからの相対パス）:
 - 15特性 × コード対応 → `fifteen-properties.md`
+- **15特性 × 全レイヤー横断（C/U/P/I/B + Layer H観察）** → `fifteen-properties-all-layers.md`
 - センター検出プロトコル → `center-analysis.md`
 - プロダクト全体性 → `product-wholeness.md`
 - アジャイル/XP 統合 → `agile-xp-integration.md`
